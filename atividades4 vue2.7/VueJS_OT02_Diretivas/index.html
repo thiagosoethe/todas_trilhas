@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Diretivas</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 9px 15px;
+            border: none;
+            background-color: #0d6efd;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #084298;
+        }
+
+        .btn-sair {
+            background-color: #dc3545;
+        }
+
+        .btn-limpar {
+            background-color: #6c757d;
+            margin-left: 5px;
+        }
+
+        .erro {
+            color: red;
+            border: 1px solid red;
+            padding: 10px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .sucesso {
+            color: green;
+            text-align: center;
+        }
+
+        .info {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0d6efd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+
+        <div v-if="autenticado">
+            <h2 class="sucesso">Bem-vindo, {{ usuario.nome }}!</h2>
+
+            <p>Você entrou no sistema usando Vue.js.</p>
+
+            <p v-if="usuario.tipo === 'admin'">
+                Tipo de acesso: Administrador
+            </p>
+
+            <p v-else-if="usuario.tipo === 'aluno'">
+                Tipo de acesso: Aluno
+            </p>
+
+            <p v-else>
+                Tipo de acesso: Usuário comum
+            </p>
+
+            <button class="btn-sair" v-on:click="logout">Sair</button>
+        </div>
+
+        <div v-else>
+            <h2>Faça login</h2>
+
+            <form v-on:submit.prevent="login">
+                <label>Usuário:</label>
+                <input 
+                    type="text" 
+                    v-model="username" 
+                    placeholder="Digite o usuário"
+                    v-bind:title="mensagemUsuario"
+                >
+
+                <label>Senha:</label>
+                <input 
+                    type="password" 
+                    v-model="password" 
+                    placeholder="Digite a senha"
+                    v-bind:title="mensagemSenha"
+                >
+
+                <button type="submit">Entrar</button>
+                <button type="button" class="btn-limpar" v-on:click="limparFormulario">Limpar</button>
+            </form>
+
+            <p v-show="erro" class="erro">
+                Nome de usuário ou senha incorretos.
+            </p>
+
+            <div class="info">
+                <p><strong>Dados para teste:</strong></p>
+
+                <ul>
+                    <li v-for="item in dadosTeste" v-bind:key="item.id">
+                        {{ item.texto }}
+                    </li>
+                </ul>
+            </div>
+
+            <a v-bind:href="linkVue" target="_blank">
+                Acessar site do Vue.js
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aplicação de Login",
+                autenticado: false,
+                usuario: {
+                    nome: "João",
+                    tipo: "aluno"
+                },
+                username: "",
+                password: "",
+                erro: false,
+                mensagemUsuario: "Digite o usuário correto",
+                mensagemSenha: "Digite a senha correta",
+                linkVue: "https://v2.vuejs.org/",
+                dadosTeste: [
+                    { id: 1, texto: "Usuário correto: usuario" },
+                    { id: 2, texto: "Senha correta: senha" },
+                    { id: 3, texto: "Use o botão Limpar para redefinir o formulário" }
+                ]
+            },
+            methods: {
+                login: function() {
+                    if (this.username === "usuario" && this.password === "senha") {
+                        this.autenticado = true;
+                        this.erro = false;
+                    } else {
+                        this.erro = true;
+                    }
+                },
+                logout: function() {
+                    this.autenticado = false;
+                    this.username = "";
+                    this.password = "";
+                    this.erro = false;
+                },
+                limparFormulario: function() {
+                    this.username = "";
+                    this.password = "";
+                    this.erro = false;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

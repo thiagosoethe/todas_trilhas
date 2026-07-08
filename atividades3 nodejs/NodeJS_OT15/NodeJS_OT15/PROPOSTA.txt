@@ -1,0 +1,13 @@
+OT15 - Projeto TodoList consumindo no front-end
+
+Proposta:
+Criar um projeto TodoList com Express, EJS, views HTML e arquivos estaticos, renderizando tarefas no front-end.
+
+Atividade:
+- Configurar Express, EJS, pasta views e pasta public.
+- Criar tela para listar tarefas.
+- Permitir adicionar e remover tarefas.
+
+Como validar:
+- TodolistSenai: node index.js
+- Abrir http://localhost:5000

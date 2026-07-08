@@ -1,0 +1,13 @@
+{
+  "name": "listadegames",
+  "version": "1.0.0",
+  "description": "Mini projeto Express com lista de games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "atividades3-nodejs": "file:../../..",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - v-model Formulario</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            width: 90%;
+            max-width: 650px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            color: #222;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .opcao {
+            margin-top: 6px;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #777;
+            border-radius: 4px;
+            background-color: #e9e9e9;
+        }
+
+        button:hover {
+            background-color: #d6d6d6;
+        }
+
+        hr {
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .dados {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+        }
+
+        .dados p {
+            margin: 7px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+
+        <form v-on:submit.prevent="enviarFormulario">
+            <label>Nome:</label>
+            <input type="text" v-model="nome">
+
+            <label>Telefone:</label>
+            <input type="text" v-model="telefone">
+
+            <label>Deseja receber novidades?</label>
+            <div class="opcao">
+                <input type="radio" value="Sim" v-model="novidades"> Sim
+            </div>
+            <div class="opcao">
+                <input type="radio" value="Não" v-model="novidades"> Não
+            </div>
+
+            <label>Interesses:</label>
+            <div class="opcao">
+                <input type="checkbox" value="Futebol" v-model="interesses"> Futebol
+            </div>
+            <div class="opcao">
+                <input type="checkbox" value="Formula 1" v-model="interesses"> Formula 1
+            </div>
+            <div class="opcao">
+                <input type="checkbox" value="Natação" v-model="interesses"> Natação
+            </div>
+
+            <label>Como conheceu o site?</label>
+            <select v-model="conheceu">
+                <option value="">Selecione uma opção</option>
+                <option value="Google">Google</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Linkedin">Linkedin</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <hr>
+
+        <h2>Dados do Formulário</h2>
+
+        <div class="dados">
+            <p>Nome: {{ nome }}</p>
+            <p>Telefone: {{ telefone }}</p>
+            <p>Novidades: {{ novidades }}</p>
+            <p>Interesses: {{ interesses.join(", ") }}</p>
+            <p>Conheceu pelo: {{ conheceu }}</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Aprendendo Vue JS",
+                nome: "",
+                telefone: "",
+                novidades: "",
+                interesses: [],
+                conheceu: ""
+            },
+            methods: {
+                enviarFormulario: function() {
+                    alert(
+                        "Dados enviados:\n" +
+                        "Nome: " + this.nome + "\n" +
+                        "Telefone: " + this.telefone + "\n" +
+                        "Novidades: " + this.novidades + "\n" +
+                        "Interesses: " + this.interesses.join(", ") + "\n" +
+                        "Conheceu pelo: " + this.conheceu
+                    );
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

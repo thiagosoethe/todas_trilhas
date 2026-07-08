@@ -1,0 +1,12 @@
+OT10 - Colecao de dados e API REST Parte I
+
+Proposta:
+Entender o conceito de API REST, metodos HTTP, status codes e colecao de dados, preparando a base de UFs para as proximas atividades.
+
+Atividade:
+- Criar uma colecao de UFs brasileiras em um arquivo de dados.
+- Usar essa colecao como base para futura API.
+
+Como validar:
+- apiRest: npm start
+- Ou, dentro de apiRest/dados: node dados.js

@@ -1,0 +1,11 @@
+OT08 - Rotas com Express Parte IV
+
+Proposta:
+Aprender a excluir dados de uma lista via API usando o metodo HTTP DELETE.
+
+Atividade:
+- Realizar a exclusao de 3 jogos dos 10 cadastrados anteriormente.
+
+Como validar:
+- ListaDeGames: node index.js
+- DELETE http://localhost:3080/0

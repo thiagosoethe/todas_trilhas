@@ -1,0 +1,14 @@
+OT14 - Refatoracao do codigo
+
+Proposta:
+Refatorar a API de UFs separando responsabilidades em camadas, deixando a logica principal em servicos e mantendo o index.js mais limpo.
+
+Atividade:
+- Criar camada servicos/servico.js.
+- Mover regras de busca para a camada de servico.
+- Manter as rotas consumindo os servicos.
+
+Como validar:
+- apiRest: node index.js
+- Abrir http://localhost:8080/ufs
+- Testar http://localhost:8080/ufs?busca=rio

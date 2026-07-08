@@ -1,0 +1,10 @@
+/* Pequenos ajustes por cima do Bootstrap 4.6 */
+:root { scroll-behavior: smooth; }
+.hero-bg {
+  background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('../imgs/Sailing Optimist.jpg') center/cover no-repeat;
+}
+.footer {
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+/* evita que imagens muito grandes quebrem card */
+.card-img-fit { height: 180px; object-fit: cover; }

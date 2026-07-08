@@ -1,0 +1,12 @@
+OT02 - Preparando o ambiente
+
+Proposta:
+Preparar o ambiente de desenvolvimento com Node.js, npm e VS Code, entendendo como instalar pacotes e executar projetos pelo terminal.
+
+Atividades:
+- Praticar uso de pacotes npm.
+- Manipular arquivos com Node.js usando o modulo fs.
+
+Como validar:
+- Pacotes_NPM: npm start
+- Projeto_File: node executar_tudo.js

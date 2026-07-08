@@ -1,0 +1,11 @@
+OT07 - Rotas com Express Parte III
+
+Proposta:
+Aprender a editar dados de uma lista via API usando o metodo HTTP PUT.
+
+Atividade:
+- Realizar a edicao de 5 jogos dos 10 cadastrados anteriormente.
+
+Como validar:
+- ListaDeGames: node index.js
+- PUT http://localhost:3080/novogame/0 com JSON contendo title, studio e price

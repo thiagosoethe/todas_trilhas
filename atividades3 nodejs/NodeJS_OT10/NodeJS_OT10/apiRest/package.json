@@ -1,0 +1,9 @@
+{
+  "name": "apirest-ot10",
+  "version": "1.0.0",
+  "description": "Dados de UFs para executar com Node.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dados/dados.js"
+  }
+}

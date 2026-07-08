@@ -1,0 +1,13 @@
+OT12 - Tratamento de erros na API
+
+Proposta:
+Melhorar a API de UFs adicionando tratamento de erros para ids inexistentes e parametros invalidos.
+
+Atividade:
+- Retornar erro quando uma UF nao existir.
+- Retornar erro quando o parametro informado nao for um numero valido.
+
+Como validar:
+- apiRest: node index.js
+- Testar http://localhost:8080/ufs/99
+- Testar http://localhost:8080/ufs/abc

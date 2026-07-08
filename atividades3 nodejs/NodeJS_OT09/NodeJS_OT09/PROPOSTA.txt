@@ -1,0 +1,15 @@
+OT09 - Pratica com Express
+
+Proposta:
+Praticar uma API CRUD completa com Express usando uma lista de carros.
+
+Atividade:
+- Criar uma lista personalizada com no minimo 6 carros, contendo nome, preco e marca.
+- Adicionar mais 3 modelos.
+- Editar 2 modelos.
+- Excluir pelo menos 2 modelos.
+
+Como validar:
+- CRUDCarrosExpress: node index.js
+- Abrir http://localhost:3000/carros
+- Testar GET, POST, PUT e DELETE nas rotas de carros.

@@ -1,0 +1,13 @@
+OT13 - Busca na API Parte IV
+
+Proposta:
+Adicionar busca por nome na API de UFs e aplicar a mesma ideia na API de games com tratamento de erros.
+
+Atividades:
+- Criar busca em /ufs?busca=rio.
+- Criar busca na API de games.
+- Tratar erro ao buscar game por id inexistente.
+
+Como validar:
+- API_UFs_OT13: node index.js e abrir http://localhost:8080/ufs?busca=rio
+- Atividade_Games_OT13: node index.js e abrir http://localhost:3080/games

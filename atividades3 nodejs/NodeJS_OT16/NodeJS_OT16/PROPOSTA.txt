@@ -1,0 +1,14 @@
+OT16 - TodoList final e correcao de bugs
+
+Proposta:
+Finalizar o projeto TodoList corrigindo bugs da exclusao, refatorando o comportamento da rota de deletar e melhorando a experiencia visual.
+
+Atividade:
+- Corrigir o bug da rota /deletar/:id.
+- Redirecionar para a rota principal apos deletar.
+- Melhorar alertas usando SweetAlert2, conforme proposta da OT.
+
+Como validar:
+- TodolistSenai: node index.js
+- Abrir http://localhost:5000
+- Adicionar e deletar tarefas verificando se a tela volta atualizada.

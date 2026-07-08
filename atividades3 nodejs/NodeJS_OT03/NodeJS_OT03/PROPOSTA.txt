@@ -1,0 +1,16 @@
+OT03 - Projetos de fixacao
+
+Proposta:
+Fixar os primeiros conceitos de Node.js criando pequenos projetos de terminal e servidores simples.
+
+Atividades:
+- Usar cores no console com pacote npm.
+- Criar mensagem de saudacao.
+- Criar servidor HTTP simples com Node.js.
+- Criar servidor que retorna uma pagina HTML.
+
+Como validar:
+- ManipulandoCoresConsole: node index.js
+- MensagemSaudacao: node index.js
+- ServidorNode: node index.js e abrir http://localhost:8081
+- ServidorHTML: node index.js e abrir http://localhost:8081

@@ -1,0 +1,9 @@
+OT01 - Introducao ao Node.js
+
+Proposta:
+Conhecer o Node.js, entender sua finalidade no back-end, aprender a executar JavaScript pelo terminal e praticar o uso de modulos com require/module.exports.
+
+Atividades:
+- Criar e executar um Hello World em Node.js.
+- Criar uma calculadora separando as operacoes em arquivos diferentes.
+

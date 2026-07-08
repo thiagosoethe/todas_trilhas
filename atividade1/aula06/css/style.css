@@ -1,0 +1,110 @@
+body{
+  font-family: Arial;
+  }
+  
+  /* MENU */
+  .navbar{
+    background:#b79adf;
+  }
+  
+  .navbar-brand{
+    color:white !important;
+    font-weight:bold;
+  }
+  
+  .navbar-brand:hover{
+    color:#f4e66a !important;
+  }
+  
+  .nav-link{
+    color:white !important;
+    font-weight:bold;
+    margin-left:10px;
+    transition:0.3s;
+    border-radius:20px;
+    padding:6px 14px !important;
+  }
+  
+  /* efeito ao passar o mouse */
+  
+  .nav-link:hover{
+    background:#f4e66a;
+    color:#5a3d7a !important;
+  }
+  
+  /* quando clicar */
+  
+  .nav-link:focus,
+  .nav-link.active{
+    background:#f4e66a;
+    color:#5a3d7a !important;
+  }
+  /* BOTÃO */
+  
+  .btn-amarelo{
+  background:#f4e66a;
+  border-radius:20px;
+  font-weight:bold;
+  }
+  
+  /* TOPO */
+  
+  .topo{
+  background:#c8b0e8;
+  color:white;
+  padding:80px;
+  }
+  
+  /* TITULOS */
+  
+  .titulo{
+  text-align:center;
+  margin-bottom:40px;
+  font-weight:bold;
+  }
+  
+  /* NÚMEROS */
+  
+  .numeros h2{
+  color:#b79adf;
+  font-size:40px;
+  }
+  
+  /* SERVIÇOS */
+  
+  .servicos{
+  background:#f8f9fa;
+  padding:60px 0;
+  }
+  
+  .card-servico{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* CONTATO */
+  
+  .contato-info{
+  background:#faf8f3;
+  padding:20px;
+  border-radius:10px;
+  }
+  
+  /* BOTÃO ROXO */
+  
+  .btn-roxo{
+  background:#b79adf;
+  color:white;
+  }
+  
+  /* RODAPÉ */
+  
+  footer{
+  background:#b79adf;
+  color:white;
+  padding:30px;
+  margin-top:50px;
+  }
