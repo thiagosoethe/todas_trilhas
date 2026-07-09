@@ -1,0 +1,14 @@
+OT04 - O que e Express.js
+
+Proposta:
+Aprender o que e o Express.js e como ele facilita a criacao de servidores, rotas e paginas web com Node.js.
+
+Atividades:
+- Criar servidor HTTP usando Express.
+- Criar rotas como pagina inicial, sobre, contato e empresa.
+- Servir uma pagina HTML usando Express.
+
+Como validar:
+- http: node index.js e abrir http://localhost:3000
+- node_website: node server.js e abrir http://localhost:3000
+- RotasExpress: node index.js e testar /, /sobre, /contato e /empresa

@@ -1,0 +1,14 @@
+OT05 - API de Games com Express
+
+Proposta:
+Criar uma API simples usando Node.js, npm, Express e Nodemon para retornar uma lista de jogos em formato JSON.
+
+Atividade:
+- Criar o projeto ListaDeGames.
+- Instalar Express.
+- Criar uma rota GET que retorna 10 jogos.
+- Cada jogo deve ter title, studio e price.
+
+Como validar:
+- ListaDeGames: node index.js
+- GET http://localhost:3080

@@ -1,0 +1,13 @@
+OT06 - Rotas com Express Parte II
+
+Proposta:
+Evoluir a API de games adicionando cadastro de novos jogos por requisicao POST e reforcar conceitos de Node, npm, Express, middleware e API REST.
+
+Atividade:
+- Criar rota POST /novogame para inserir jogos na lista.
+- Responder as perguntas teoricas da OT sobre Node.js, Express, middlewares, rotas e API REST.
+
+Como validar:
+- ListaDeGames: node index.js
+- GET http://localhost:3080
+- POST http://localhost:3080/novogame com JSON contendo title, studio e price
